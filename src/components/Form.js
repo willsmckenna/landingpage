@@ -25,18 +25,18 @@ const Form = () => {
         event.preventDefault();
         if (radioValue === 'cases-and-deaths-map'){
             if (zipValue !== ''){
-                window.location.href = `https://desktop-krh7oek:3344/webappbuilder/apps/5/?find=${zipValue}`;
+                window.location.href = `http://covid-cases-deaths-tests.surge.sh?find=${zipValue}`;
             }
             else{
-                window.location.href = `https://desktop-krh7oek:3344/webappbuilder/apps/5`;
+                window.location.href = `http://covid-cases-deaths-tests.surge.sh/`;
             }
         }
         else if (radioValue === 'vaccine-map'){
             if (zipValue !== ''){
-                window.location.href = `https://desktop-krh7oek:3344/webappbuilder/apps/7/?find=${zipValue}`;
+                window.location.href = `http://vaccine-map.surge.sh?find=${zipValue}`;
             }
             else {
-                window.location.href = `https://desktop-krh7oek:3344/webappbuilder/apps/7`;
+                window.location.href = `http://vaccine-map.surge.sh`;
             }
         }
     }
