@@ -23,7 +23,7 @@ const LandingPage = () => {
                         <br/>
                         <Typography color="textSecondary" gutterBottom>
                             Welcome to Depaul University's interactive web app mapping COVID-19 related data across 
-                            the city of Chicago. Choose the vaccine map or the cases and deaths map. Optionally enter 
+                            the city of Chicago. Choose the vaccine map or the cases, tests, and deaths map. Optionally enter 
                             in a zipcode for the map to zoom in on, or go to city-wide view by clicking go to map:
                             <Form/>
                         </Typography>
