@@ -25,7 +25,7 @@ const Form = () => {
         event.preventDefault();
         if (radioValue === 'cases-and-deaths-map'){
             if (zipValue !== ''){
-                window.location.href = `http://covid-cases-deaths-tests.surge.sh?find=${zipValue}`;
+                window.location.href = `http://covid-cases-deaths-tests.surge.sh?find=Chicago,${zipValue}`;
             }
             else{
                 window.location.href = `http://covid-cases-deaths-tests.surge.sh/`;
@@ -33,7 +33,7 @@ const Form = () => {
         }
         else if (radioValue === 'vaccine-map'){
             if (zipValue !== ''){
-                window.location.href = `http://vaccine-map.surge.sh?find=${zipValue}`;
+                window.location.href = `http://vaccine-map.surge.sh?find=Chicago,${zipValue}`;
             }
             else {
                 window.location.href = `http://vaccine-map.surge.sh`;
