@@ -18,19 +18,16 @@ const LandingPage = () => {
                 <Card style={{marginTop:'5em', boxShadow: '0px 44px 45px'}} variant="outlined" elevation={5}>
                     <CardContent>
                         <Typography variant="h5" component="h2">
-                            Depaul University COVID-19 Dashboard
+                            DePaul University COVID-19 Dashboard
                         </Typography>
                         <br/>
                         <Typography color="textSecondary" gutterBottom>
-                            Welcome to Depaul University's interactive web app mapping COVID-19 related data across 
+                            Welcome to DePaul University's interactive web app mapping COVID-19 related data across 
                             the city of Chicago. Choose the vaccine map or the cases, tests, and deaths map. Optionally enter 
                             in a zipcode for the map to zoom in on, or go to city-wide view by clicking go to map:
                             <Form/>
                         </Typography>
                     </CardContent>
-                <CardActions>
-                    <Button size="small">Learn More</Button>
-                </CardActions>
                 </Card>
             </Container>
         </div>
