@@ -7,7 +7,8 @@ import Radio from '@material-ui/core/Radio';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-
+import { Redirect } from 'react-router-dom';
+ 
 const Form = () => {
     const [radioValue, setRadioValue] = useState('cases-and-deaths-map');
     const [zipValue, setZipValue] = useState('');
@@ -25,18 +26,26 @@ const Form = () => {
         event.preventDefault();
         if (radioValue === 'cases-and-deaths-map'){
             if (zipValue !== ''){
-                window.location.href = `http://covid-cases-deaths-tests.surge.sh?find=Chicago,${zipValue}`;
+                <Redirect to={{
+                    pathname: "/cases-index.html",
+                    search: `?find=Chicago,${zipValue}`
+                }}
+                />;
             }
             else{
-                window.location.href = `http://covid-cases-deaths-tests.surge.sh/`;
+                <Redirect to="/cases-index.html" />
             }
         }
         else if (radioValue === 'vaccine-map'){
             if (zipValue !== ''){
-                window.location.href = `http://vaccine-map.surge.sh?find=Chicago,${zipValue}`;
+                <Redirect to={{
+                    pathname: "/vaccine-index.html",
+                    search: `?find=Chicago,${zipValue}`
+                    }}
+                />
             }
             else {
-                window.location.href = `http://vaccine-map.surge.sh`;
+                <Redirect to="/vaccine-index.html" />
             }
         }
     }
