@@ -26,26 +26,18 @@ const Form = () => {
         event.preventDefault();
         if (radioValue === 'cases-and-deaths-map'){
             if (zipValue !== ''){
-                <Redirect to={{
-                    pathname: "/cases-index.html",
-                    search: `?find=Chicago,${zipValue}`
-                }}
-                />;
+                window.location.href = `https://gislab.depaul.edu/covid/CasesAndDeaths2.0-master/index.html?find=Chicago,${zipValue}`;
             }
             else{
-                <Redirect to="/cases-index.html" />
+                window.location.href = `https://gislab.depaul.edu/covid/CasesAndDeaths2.0-master/index.html`;
             }
         }
         else if (radioValue === 'vaccine-map'){
             if (zipValue !== ''){
-                <Redirect to={{
-                    pathname: "/vaccine-index.html",
-                    search: `?find=Chicago,${zipValue}`
-                    }}
-                />
+                window.location.href = `https://gislab.depaul.edu/covid/VaccineMap2.0-master/index.html?find=Chicago,${zipValue}`;
             }
             else {
-                <Redirect to="/vaccine-index.html" />
+                window.location.href = `https://gislab.depaul.edu/covid/VaccineMap2.0-master/index.html`;
             }
         }
     }
